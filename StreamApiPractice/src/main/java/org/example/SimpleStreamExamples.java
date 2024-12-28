@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SimpleStreamExamples {
@@ -33,6 +31,14 @@ public class SimpleStreamExamples {
     public void findSecondHigest(List<Integer> nums){
         System.out.println("output of findSecondHigest ex1:"
                 +nums.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst());
-
     }
+
+    public void charCount(){
+        String s = "stream API practice ";
+        Map<String,Long> res = Arrays.stream(s.split(""))
+                .filter(c->!c.equals(" "))
+                .collect(Collectors.groupingBy(c->c,Collectors.counting()));
+        System.out.println(res);
+    }
+
 }

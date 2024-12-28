@@ -16,6 +16,13 @@ public class Main {
         simpleStreamExamples.sumEven(list1);
         simpleStreamExamples.findMaximum(list1);
         simpleStreamExamples.findSecondHigest(list1);
+        simpleStreamExamples.charCount();
+
+        //complex stream example
+        ComplexStreamExample complexStreamExample = new ComplexStreamExample();
+        complexStreamExample.fetchHighestSalaryEmpId();
+
+        complexStreamExample.joiningTwoArrays();
     }
 
 
