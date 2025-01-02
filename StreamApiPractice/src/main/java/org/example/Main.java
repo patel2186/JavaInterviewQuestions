@@ -1,6 +1,8 @@
 package org.example;
 
 
+import org.example.streamOnObjects.EmployeeUtility;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,6 +10,10 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+        FunctionalExample functionalExample = new FunctionalExample();
+        functionalExample.writeFunctionalExample();
+
         List<Integer> list1 = Arrays.asList(4,25,7,95,3,2,7,1,43,7,8,8,1,4,92,0);
         SimpleStreamExamples simpleStreamExamples = new SimpleStreamExamples();
         simpleStreamExamples.extractUniqueEvenNumber(list1);
@@ -23,6 +29,12 @@ public class Main {
         complexStreamExample.fetchHighestSalaryEmpId();
 
         complexStreamExample.joiningTwoArrays();
+
+        //stream operations on object
+        EmployeeUtility employeeUtility = new EmployeeUtility();
+        employeeUtility.getCityEmployeeCount();
+        employeeUtility.sortedEmployees();
+
     }
 
 
